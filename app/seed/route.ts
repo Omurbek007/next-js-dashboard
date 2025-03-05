@@ -2,6 +2,8 @@ import bcrypt from 'bcrypt';
 import postgres from 'postgres';
 import { invoices, customers, revenue, users } from '../lib/placeholder-data';
 
+
+console.log("Hello world route run")
 const sql = postgres(process.env.POSTGRES_URL!, { ssl: 'require' });
 
 async function seedUsers() {
@@ -54,6 +56,7 @@ async function seedInvoices() {
 
   return insertedInvoices;
 }
+
 
 async function seedCustomers() {
   await sql`CREATE EXTENSION IF NOT EXISTS "uuid-ossp"`;

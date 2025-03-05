@@ -29,6 +29,12 @@ const customers = [
     image_url: '/customers/lee-robinson.png',
   },
   {
+    id: 'a1b2c3d4-e5f6-7890-abcd-ef1234567890',
+    name: 'Om Melis',
+    email: 'om_mel@gmail.com',
+    image_url: '/customers/omurbek2.png',
+  },
+  {
     id: '76d65c26-f784-44a2-ac19-586678f7c2f2',
     name: 'Michael Novotny',
     email: 'michael@novotny.com',
