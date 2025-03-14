@@ -136,6 +136,7 @@ export async function fetchInvoicesPages(query: string) {
       invoices.status ILIKE ${`%${query}%`}
   `;
     const totalPages = Math.ceil(Number(data[0].count) / ITEMS_PER_PAGE);
+    console.log(totalPages)
     return totalPages;
   } catch (error) {
     console.error('Database Error:', error);
@@ -160,7 +161,6 @@ export async function fetchInvoiceById(id: string) {
       // Convert amount from cents to dollars
       amount: invoice.amount / 100,
     }));
-
     return invoice[0];
   } catch (error) {
     console.error('Database Error:', error);
